@@ -1,0 +1,22 @@
+[
+    {
+        "question": "what is 2+2",
+        "answers": {
+            "a": "4",
+            "b": "5",
+            "c": "6"
+        },
+        "correct_answer": "a",
+        "question_points": 300
+    },
+    {
+        "question": "what is 4+4",
+        "answers": {
+            "a": "6",
+            "b": "7",
+            "c": "8"
+        },
+        "correct_answer": "c",
+        "question_points": 500
+    }
+]

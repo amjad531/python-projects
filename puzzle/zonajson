@@ -1,0 +1,77 @@
+import json
+
+
+total_points = 100
+questions = [
+    {
+        "question": "is amjad = bagar?",
+        "answers": {
+            "a": "yes",
+            "b": "no",
+            "c": "maybe",
+        },
+        "correct_answer": "a",
+        "points": 50,
+    },
+    {
+        "question": "is yazan = bagar?",
+        "answers": {
+            "a": "yes",
+            "b": "no",
+            "c": "maybe",
+        },
+        "correct_answer": "b",
+        "points": total_points - 50,
+    }
+]
+
+### read json string content from file into code:
+
+# with open('json/questions.json', 'r') as f:
+#     file_content = json.load(f)
+#     print(file_content['test'])
+
+
+### read json string content from string variable and convert it into dict or list
+
+# json_string = """{
+#     "test": 1,
+#     "test2": 2
+# }"""
+# json_obj = json.loads(json_string)
+# print(json_obj)
+# print(json_obj['test2'])
+
+
+
+### convert variable into json string and write it to a file
+
+# with open('json/questions.json', 'w') as f:
+#     questions_json_str = json.dump(questions, f, indent=4) # indent is optional, for human readability
+
+
+### convert variable into json string and get the string value
+
+# questions_str = json.dumps(questions, indent=4)
+# print(questions_str)
+
+
+
+with open('json/questions.json', 'r') as f:
+    questions = json.load(f)
+
+print(questions)
+
+def update_questions_in_file():
+    with open('json/questions.json', 'w') as f:
+        json.dump(questions, f)
+
+
+
+while True:
+    inp = input('add new question plz:')
+
+    questions.append({'question': inp})
+    update_questions_in_file()
+
+    # print(questions)
