@@ -18,7 +18,7 @@ my_str = "welcomeemoclew"
 #     else:
 #         print("False")
 if len(my_str) % 2 != 0:
-    print("Falsez")
+    print("False")
 else:
     mid_index = len(my_str) // 2
     mylist1 = list(my_str[:mid_index])
